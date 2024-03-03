@@ -53,7 +53,7 @@ const eventsList = [
 // Write your code here
 
 const Events = () => {
-  console.log(eventsList)
+  console.log('Events')
 
   return (
     <div className="bg">
