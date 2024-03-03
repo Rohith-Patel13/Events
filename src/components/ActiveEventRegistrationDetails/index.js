@@ -55,7 +55,7 @@ const ActiveEventRegistrationDetails = props => {
       return <h1>{registeredFunc()}</h1>
 
     case registrationStatusView.RegistrationsClosed:
-      return <h1>{registrationClosed()}</h1>
+      return registrationClosed()
 
     default:
       return null
