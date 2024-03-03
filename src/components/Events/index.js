@@ -59,9 +59,11 @@ const Events = () => {
     <div className="bg">
       <div className="leftBg">
         <h1>Events</h1>
-        {eventsList.map(eachObject => (
-          <EventItem eachObject={eachObject} key={eachObject.id} />
-        ))}
+        <ul>
+          {eventsList.map(eachObject => (
+            <EventItem eachObject={eachObject} key={eachObject.id} />
+          ))}
+        </ul>
       </div>
       <div className="rightBg">
         <h1>Click on an event,to view its registration details</h1>
