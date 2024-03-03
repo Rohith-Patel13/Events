@@ -1,0 +1,13 @@
+/* Write your CSS here */
+
+.bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftBg {
+  height: 100vh;
+  background-color: #475569;
+  width: 50%;
+}
