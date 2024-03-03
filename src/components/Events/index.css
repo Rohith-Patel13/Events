@@ -20,3 +20,10 @@ ul {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.rightBg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

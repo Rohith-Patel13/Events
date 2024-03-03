@@ -1,4 +1,6 @@
+import {useState} from 'react'
 import EventItem from '../EventItem/index'
+import ActiveEventRegistrationDetails from '../ActiveEventRegistrationDetails/index'
 import './index.css'
 
 const eventsList = [
@@ -53,7 +55,12 @@ const eventsList = [
 // Write your code here
 
 const Events = () => {
-  console.log('Events')
+  const [registrationStatusViewValue, setRegisterStatus] = useState('')
+
+  const imageClicked = (idNum, registrationStatus) => {
+    console.log(idNum, registrationStatus)
+    setRegisterStatus(registrationStatus)
+  }
 
   return (
     <div className="bg">
@@ -61,12 +68,18 @@ const Events = () => {
         <h1>Events</h1>
         <ul>
           {eventsList.map(eachObject => (
-            <EventItem eachObject={eachObject} key={eachObject.id} />
+            <EventItem
+              eachObject={eachObject}
+              key={eachObject.id}
+              imageClicked={imageClicked}
+            />
           ))}
         </ul>
       </div>
       <div className="rightBg">
-        <h1>Click on an event,to view its registration details</h1>
+        <ActiveEventRegistrationDetails
+          registrationStatusViewValue={registrationStatusViewValue}
+        />
       </div>
     </div>
   )
